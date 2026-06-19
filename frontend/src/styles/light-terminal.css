@@ -1,0 +1,1441 @@
+/* Light quant terminal theme. Loaded last to soften the previous dark theme. */
+
+:root {
+  color-scheme: light;
+  color: #123044;
+  background: #eef6fb;
+  --surface-0: #eef6fb;
+  --surface-1: #f6fafd;
+  --surface-2: #ffffff;
+  --surface-3: #e7f1f8;
+  --border: #d3e2ec;
+  --border-strong: #b8cee3;
+  --border-subtle: rgba(129, 153, 174, 0.44);
+  --text-1: #123044;
+  --text-2: #4d6475;
+  --text-3: #7a8fa0;
+  --text-main: #123044;
+  --text-soft: #4d6475;
+  --text-muted: #7a8fa0;
+  --text-faint: #8aa0af;
+  --bg-deep: #eef6fb;
+  --bg-surface: rgba(255, 255, 255, 0.82);
+  --bg-panel: rgba(255, 255, 255, 0.86);
+  --bg-panel-strong: rgba(255, 255, 255, 0.96);
+  --bg-field: rgba(255, 255, 255, 0.94);
+  --accent: #14b8a6;
+  --info: #2f80ed;
+  --buy: #16a34a;
+  --sell: #e11d48;
+  --watch: #d97706;
+  --success: #16a34a;
+  --danger: #e11d48;
+  --warning: #d97706;
+  --neutral: #7a8fa0;
+  --radius-lg: 12px;
+  --radius-md: 10px;
+  --shadow-panel:
+    0 12px 34px rgba(31, 76, 112, 0.08),
+    0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+html,
+body,
+#app {
+  background: #eef6fb;
+}
+
+body {
+  color: var(--text-main);
+  background:
+    radial-gradient(circle at 18% 0%, rgba(47, 128, 237, 0.12), transparent 34%),
+    radial-gradient(circle at 88% 8%, rgba(20, 184, 166, 0.08), transparent 30%),
+    linear-gradient(180deg, #f6fafd 0%, #eef6fb 52%, #e9f2f8 100%);
+}
+
+.app-shell,
+.ant-layout.app-shell,
+.app-content-shell.ant-layout {
+  background:
+    radial-gradient(circle at 20% 0%, rgba(47, 128, 237, 0.12), transparent 36%),
+    radial-gradient(circle at 86% 8%, rgba(20, 184, 166, 0.08), transparent 32%),
+    linear-gradient(180deg, #f6fafd 0%, #eef6fb 48%, #e9f2f8 100%) !important;
+}
+
+.app-shell::before {
+  background:
+    linear-gradient(180deg, rgba(231, 241, 248, 0.96), rgba(238, 246, 251, 0.98)),
+    #e7f1f8;
+  border-right-color: rgba(129, 153, 174, 0.34);
+  box-shadow: 12px 0 34px rgba(31, 76, 112, 0.08);
+}
+
+.app-aside,
+.app-aside .ant-layout-sider-children {
+  background: rgba(231, 241, 248, 0.92) !important;
+  border-right-color: rgba(129, 153, 174, 0.34) !important;
+  box-shadow: none !important;
+}
+
+.brand {
+  height: 66px;
+  border-bottom-color: rgba(148, 173, 198, 0.28);
+}
+
+.brand-mark {
+  border-color: rgba(47, 128, 237, 0.18);
+  background: #ffffff;
+  box-shadow: 0 10px 24px rgba(47, 128, 237, 0.1);
+}
+
+.brand-title {
+  color: #123044;
+  font-weight: 850;
+}
+
+.brand-subtitle,
+.page-eyebrow {
+  color: #6b7c90;
+  letter-spacing: 0;
+}
+
+.side-menu {
+  padding: 10px 10px;
+  scrollbar-color: rgba(47, 128, 237, 0.22) transparent;
+}
+
+.side-menu::-webkit-scrollbar-thumb {
+  background: rgba(47, 128, 237, 0.22);
+}
+
+.side-menu.ant-menu {
+  color: #5c7182;
+}
+
+.side-menu.ant-menu .ant-menu-item {
+  height: 40px;
+  line-height: 40px;
+  margin: 4px 0;
+  color: #5c7182;
+  border-radius: 10px;
+  font-weight: 760;
+}
+
+.side-menu.ant-menu .ant-menu-item .anticon {
+  font-size: 16px;
+}
+
+.side-menu.ant-menu .ant-menu-item:not(.ant-menu-item-selected):active,
+.side-menu.ant-menu .ant-menu-item:not(.ant-menu-item-selected):hover {
+  color: #1c5fb9;
+  background: rgba(47, 128, 237, 0.08);
+}
+
+.side-menu.ant-menu .ant-menu-item:hover::before,
+.side-menu.ant-menu .ant-menu-item-selected::before {
+  background: #2f80ed;
+}
+
+.side-menu.ant-menu .ant-menu-item-selected {
+  color: #1c5fb9;
+  background: rgba(47, 128, 237, 0.12);
+  border: 1px solid rgba(47, 128, 237, 0.18);
+  box-shadow: none;
+}
+
+.app-header {
+  height: 54px;
+  color: var(--text-main);
+  background: rgba(246, 250, 253, 0.88) !important;
+  border-bottom-color: rgba(129, 153, 174, 0.28) !important;
+  box-shadow: 0 10px 30px rgba(31, 76, 112, 0.06) !important;
+}
+
+.app-header h1 {
+  color: #123044;
+  font-size: 19px;
+}
+
+.header-status {
+  color: #7a8fa0;
+}
+
+.sidebar-toggle.ant-btn {
+  color: #1c5fb9;
+  background: rgba(47, 128, 237, 0.08);
+  border-color: rgba(47, 128, 237, 0.18);
+}
+
+.sidebar-toggle.ant-btn:hover,
+.sidebar-toggle.ant-btn:focus {
+  color: #164f9c !important;
+  background: rgba(47, 128, 237, 0.14) !important;
+  border-color: rgba(47, 128, 237, 0.28) !important;
+}
+
+.status-pill {
+  color: #1c5fb9;
+  background: rgba(47, 128, 237, 0.08);
+  border-color: rgba(47, 128, 237, 0.18);
+}
+
+.logout-button.ant-btn {
+  min-height: 30px;
+  height: 30px;
+  padding: 0 10px;
+  color: #49687d !important;
+  background: rgba(255, 255, 255, 0.72) !important;
+  border-color: rgba(148, 173, 198, 0.38) !important;
+  box-shadow: none !important;
+}
+
+.logout-button.ant-btn:hover,
+.logout-button.ant-btn:focus {
+  color: #1c5fb9 !important;
+  background: rgba(47, 128, 237, 0.1) !important;
+  border-color: rgba(47, 128, 237, 0.28) !important;
+}
+
+.app-main {
+  padding: 12px;
+}
+
+.page,
+.page-shell,
+.page-container {
+  gap: 10px;
+}
+
+.glass-card,
+.section,
+.metric,
+.metric-card,
+.table-card,
+.glass-toolbar,
+.dashboard-page .dashboard-hero,
+.workspace-item,
+.chart-card,
+.decision-card,
+.indicator-card,
+.analysis-tabs-card,
+.control-card,
+.batch-card,
+.history-card,
+.compare-card,
+.quality-card,
+.benchmark-card,
+.ai-export-card,
+.curve-card,
+.position-card,
+.trade-card,
+.empty-card {
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.84) !important;
+  border: 1px solid rgba(148, 173, 198, 0.34) !important;
+  border-radius: 12px !important;
+  box-shadow: var(--shadow-panel) !important;
+  backdrop-filter: blur(12px);
+}
+
+.glass-card.interactive:hover,
+.metric:hover,
+.metric-card:hover,
+.clickable-card:hover {
+  border-color: rgba(47, 128, 237, 0.28) !important;
+  box-shadow: 0 14px 36px rgba(31, 76, 112, 0.12) !important;
+}
+
+.section-title {
+  color: #123044;
+  font-size: 15px;
+  font-weight: 850;
+}
+
+.section-title::before {
+  width: 3px;
+  height: 15px;
+  background: #4aa3ff;
+}
+
+.metric-grid {
+  gap: 8px;
+}
+
+.metric,
+.metric-card {
+  min-height: 86px;
+  padding: 10px;
+}
+
+.metric-label,
+.metric-note,
+.muted,
+.metric-cyan,
+.signal-meta,
+.cell-stack span,
+.updated-time {
+  color: #7a8fa0 !important;
+}
+
+.metric-value {
+  color: #123044;
+  font-size: 27px;
+}
+
+.metric-icon {
+  background: rgba(47, 128, 237, 0.08) !important;
+}
+
+.metric-blue {
+  color: #2f80ed !important;
+}
+
+.metric-green,
+.value-up {
+  color: #16a34a !important;
+}
+
+.metric-red,
+.value-down {
+  color: #e11d48 !important;
+}
+
+.value-blue {
+  color: #1c5fb9 !important;
+}
+
+.value-warn {
+  color: #d97706 !important;
+}
+
+.reason-list {
+  color: #4d6475;
+}
+
+.ghost-button {
+  color: #1c5fb9;
+  background: rgba(47, 128, 237, 0.06);
+  border-color: rgba(47, 128, 237, 0.18);
+}
+
+.ant-btn {
+  min-height: 32px;
+  color: #1e3348;
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(148, 173, 198, 0.46);
+  box-shadow: none;
+}
+
+.ant-btn:hover,
+.ant-btn:focus {
+  color: #1c5fb9 !important;
+  background: #ffffff !important;
+  border-color: rgba(47, 128, 237, 0.38) !important;
+}
+
+.ant-btn-primary {
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #4aa3ff, #2f80ed) !important;
+  border-color: transparent !important;
+  box-shadow: 0 10px 24px rgba(47, 128, 237, 0.18);
+}
+
+.ant-btn-primary:hover,
+.ant-btn-primary:focus {
+  color: #ffffff !important;
+  transform: none;
+  box-shadow: 0 12px 28px rgba(47, 128, 237, 0.22);
+}
+
+.warning-button,
+.dashboard-page .warning-button {
+  color: #1c5fb9 !important;
+  background: rgba(47, 128, 237, 0.1) !important;
+  border-color: rgba(47, 128, 237, 0.2) !important;
+  filter: none !important;
+}
+
+.ant-btn-dangerous {
+  color: #be123c !important;
+  background: rgba(244, 63, 94, 0.08) !important;
+  border-color: rgba(244, 63, 94, 0.22) !important;
+}
+
+.ant-btn[disabled],
+.ant-btn-disabled {
+  color: #8aa0af !important;
+  background: rgba(241, 245, 249, 0.74) !important;
+  border-color: rgba(203, 213, 225, 0.72) !important;
+}
+
+.ant-input,
+.ant-input-number,
+.ant-picker,
+.ant-select-selector,
+.ant-input-affix-wrapper,
+.ant-input-number-affix-wrapper,
+.ant-input-textarea-affix-wrapper {
+  color: #123044 !important;
+  background: rgba(255, 255, 255, 0.94) !important;
+  border-color: rgba(148, 173, 198, 0.48) !important;
+  border-radius: 10px !important;
+}
+
+.ant-input:hover,
+.ant-input-number:hover,
+.ant-picker:hover,
+.ant-select:not(.ant-select-disabled):hover .ant-select-selector,
+.ant-input-affix-wrapper:hover {
+  border-color: rgba(47, 128, 237, 0.42) !important;
+}
+
+.ant-input:focus,
+.ant-input-focused,
+.ant-input-number-focused,
+.ant-picker-focused,
+.ant-select-focused .ant-select-selector,
+.ant-input-affix-wrapper-focused {
+  border-color: rgba(47, 128, 237, 0.66) !important;
+  box-shadow: 0 0 0 3px rgba(47, 128, 237, 0.12) !important;
+}
+
+.ant-input::placeholder,
+.ant-picker-input > input::placeholder,
+.ant-select-selection-placeholder {
+  color: #8aa0af !important;
+}
+
+.ant-picker-input > input,
+.ant-select-selection-item,
+.ant-select-selection-search-input,
+.ant-input-number-input {
+  color: #123044 !important;
+}
+
+.ant-picker-suffix,
+.ant-picker-clear,
+.ant-select-arrow,
+.ant-input-number-handler-wrap,
+.ant-input-number-handler {
+  color: #7a8fa0 !important;
+}
+
+.ant-radio-button-wrapper {
+  color: #5c7182;
+  background: #ffffff;
+  border-color: rgba(148, 173, 198, 0.44);
+}
+
+.ant-radio-button-wrapper:hover {
+  color: #1c5fb9;
+}
+
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+  color: #ffffff;
+  background: linear-gradient(135deg, #4aa3ff, #2f80ed);
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.ant-tag {
+  color: #4d6475;
+  background: rgba(241, 245, 249, 0.9);
+  border-color: rgba(148, 173, 198, 0.36);
+}
+
+.ant-select-dropdown,
+.ant-picker-dropdown .ant-picker-panel-container,
+.ant-dropdown .ant-dropdown-menu,
+.ant-modal-content,
+.ant-modal-confirm .ant-modal-content,
+.ant-message-notice-content {
+  color: #123044;
+  background: rgba(255, 255, 255, 0.98) !important;
+  border: 1px solid rgba(148, 173, 198, 0.38) !important;
+  box-shadow: 0 22px 64px rgba(31, 76, 112, 0.18) !important;
+}
+
+.ant-select-item,
+.ant-dropdown-menu-item,
+.ant-dropdown-menu-submenu-title,
+.ant-modal-title,
+.ant-modal-confirm-title,
+.ant-modal-confirm-content,
+.ant-modal-close,
+.ant-picker-dropdown .ant-picker-header,
+.ant-picker-dropdown .ant-picker-header-view,
+.ant-picker-dropdown .ant-picker-header-view button,
+.ant-picker-header button,
+.ant-picker-cell-in-view {
+  color: #123044 !important;
+}
+
+.ant-select-item-option-active:not(.ant-select-item-option-disabled),
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled),
+.ant-dropdown-menu-item:hover,
+.ant-dropdown-menu-submenu-title:hover {
+  color: #1c5fb9 !important;
+  background: rgba(47, 128, 237, 0.08) !important;
+}
+
+.ant-picker-cell {
+  color: #8aa0af !important;
+}
+
+.ant-picker-cell-in-view .ant-picker-cell-inner {
+  color: #4d6475;
+}
+
+.ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner,
+.ant-picker-cell-in-view.ant-picker-cell-range-start .ant-picker-cell-inner,
+.ant-picker-cell-in-view.ant-picker-cell-range-end .ant-picker-cell-inner {
+  color: #ffffff !important;
+  background: #2f80ed !important;
+}
+
+.ant-picker-cell-in-view.ant-picker-cell-in-range .ant-picker-cell-inner {
+  color: #1c5fb9 !important;
+  background: rgba(47, 128, 237, 0.12) !important;
+}
+
+.ant-empty-description {
+  color: #7a8fa0;
+}
+
+.ant-spin-dot-item {
+  background-color: #2f80ed;
+}
+
+.app-table.ant-table-wrapper .ant-table,
+.app-table .ant-table {
+  color: #123044;
+  background: #ffffff;
+}
+
+.app-table .ant-table-container {
+  border-color: rgba(148, 173, 198, 0.36);
+  border-radius: 10px;
+}
+
+.app-table .ant-table-thead > tr > th {
+  color: #4d6475;
+  background: #eef6fb;
+  border-bottom-color: rgba(148, 173, 198, 0.38);
+}
+
+.app-table .ant-table-tbody > tr > td {
+  color: #1e3348;
+  background: #ffffff;
+  border-bottom-color: rgba(226, 232, 240, 0.95);
+}
+
+.app-table .ant-table-tbody > tr:nth-child(even) > td {
+  background: #f6fafd;
+}
+
+.app-table .ant-table-tbody > tr.ant-table-row:hover > td,
+.app-table .ant-table-tbody > tr > td.ant-table-cell-row-hover {
+  background: rgba(47, 128, 237, 0.07) !important;
+}
+
+.app-table .ant-table-cell-fix-left,
+.app-table .ant-table-cell-fix-right {
+  background: #ffffff !important;
+  box-shadow: -10px 0 22px rgba(31, 76, 112, 0.08);
+}
+
+.app-table .ant-table-placeholder,
+.app-table .ant-table-placeholder:hover > td {
+  color: #7a8fa0;
+  background: #ffffff !important;
+}
+
+.app-table .ant-table-body {
+  scrollbar-color: rgba(47, 128, 237, 0.22) rgba(226, 232, 240, 0.45);
+}
+
+.app-table .ant-table-body::-webkit-scrollbar-track {
+  background: rgba(226, 232, 240, 0.45);
+}
+
+.app-table .ant-table-body::-webkit-scrollbar-thumb {
+  background: rgba(47, 128, 237, 0.22);
+}
+
+.app-table .ant-table-row-selected > td {
+  background: rgba(47, 128, 237, 0.1) !important;
+}
+
+.table-summary {
+  color: #7a8fa0;
+}
+
+.table-count-pill {
+  color: #1c5fb9;
+  background: rgba(47, 128, 237, 0.08);
+  border-color: rgba(47, 128, 237, 0.18);
+}
+
+.ant-checkbox-inner {
+  background: #ffffff;
+  border-color: rgba(148, 173, 198, 0.58);
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+  background: #2f80ed;
+  border-color: #2f80ed;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner::after {
+  border-color: #ffffff;
+}
+
+.ant-upload-wrapper,
+.ant-upload-list,
+.ant-upload-list-item,
+.ant-upload-list-item-name {
+  color: #4d6475;
+}
+
+.dashboard-page .dashboard-hero {
+  background: rgba(255, 255, 255, 0.82) !important;
+}
+
+.dashboard-page .signal-card,
+.dashboard-page .rank-row,
+.dashboard-page .mobile-signal-card,
+.watch-row,
+.risk-row {
+  color: #123044 !important;
+  background: rgba(255, 255, 255, 0.88) !important;
+  border-color: rgba(148, 173, 198, 0.32) !important;
+}
+
+.dashboard-page .signal-card:hover,
+.dashboard-page .rank-row:hover,
+.dashboard-page .mobile-signal-card:hover {
+  background: rgba(47, 128, 237, 0.06) !important;
+  border-color: rgba(47, 128, 237, 0.24) !important;
+}
+
+.dashboard-page .panel-head > strong,
+.dashboard-page .signal-symbol,
+.dashboard-page .symbol-link,
+.dashboard-page .signal-expanded h4,
+.watch-block h3,
+.watch-row strong {
+  color: #123044 !important;
+}
+
+.dashboard-page .symbol-link:hover,
+.dashboard-page .rank-row em {
+  color: #1c5fb9 !important;
+}
+
+.dashboard-page .signal-expanded p,
+.dashboard-page .price-triplet,
+.dashboard-page .reason-summary,
+.risk-row small {
+  color: #5c7182 !important;
+}
+
+.dashboard-page .risk-tag-low {
+  color: #15803d;
+  background: rgba(22, 163, 74, 0.08);
+  border-color: rgba(22, 163, 74, 0.2);
+}
+
+.dashboard-page .risk-tag-medium {
+  color: #b45309;
+  background: rgba(217, 119, 6, 0.08);
+  border-color: rgba(217, 119, 6, 0.2);
+}
+
+.dashboard-page .risk-tag-high {
+  color: #be123c;
+  background: rgba(225, 29, 72, 0.08);
+  border-color: rgba(225, 29, 72, 0.2);
+}
+
+.dashboard-page .risk-tag-unknown {
+  color: #7a8fa0;
+  background: rgba(100, 116, 139, 0.08);
+  border-color: rgba(100, 116, 139, 0.18);
+}
+
+.chart-shell .chart-stage {
+  background: #ffffff !important;
+  border-color: rgba(148, 173, 198, 0.36) !important;
+}
+
+.chart-shell .chart-tape,
+.chart-shell .chart-diagnostic {
+  background: rgba(148, 173, 198, 0.24) !important;
+  border-bottom-color: rgba(148, 173, 198, 0.32) !important;
+}
+
+.chart-shell .chart-tape > div,
+.chart-shell .chart-diagnostic > div {
+  background: #f6fafd !important;
+}
+
+.chart-shell .chart-tape span,
+.chart-shell .chart-diagnostic span,
+.chart-empty span {
+  color: #7a8fa0 !important;
+}
+
+.chart-shell .chart-tape strong,
+.chart-shell .chart-diagnostic strong,
+.chart-empty strong {
+  color: #123044 !important;
+}
+
+.chart-shell .kline-chart,
+.chart-empty {
+  background: #ffffff !important;
+  border-color: rgba(148, 173, 198, 0.34) !important;
+  color: #123044 !important;
+}
+
+.chart-shell .empty-orbit {
+  border-color: rgba(47, 128, 237, 0.18) !important;
+  background:
+    linear-gradient(90deg, transparent 8px, rgba(47, 128, 237, 0.16) 9px, transparent 10px),
+    linear-gradient(0deg, transparent 8px, rgba(47, 128, 237, 0.14) 9px, transparent 10px),
+    #eef6fb !important;
+}
+
+.backtest-page .ant-collapse,
+.backtest-page .ant-collapse-content,
+.backtest-page .ant-collapse-item,
+.analysis-tabs-card .ant-tabs,
+.analysis-tabs-card .ant-tabs-content-holder {
+  color: #123044;
+  background: transparent !important;
+  border-color: rgba(148, 173, 198, 0.28) !important;
+}
+
+.raw-report,
+.ai-report-preview {
+  color: #1e3348 !important;
+  background: #f6fafd !important;
+  border-color: rgba(148, 173, 198, 0.34) !important;
+}
+
+.backtest-page .control-card,
+.backtest-page .batch-card,
+.backtest-page .compare-card,
+.backtest-page .benchmark-card,
+.backtest-page .quality-card,
+.backtest-page .ai-export-card {
+  background: rgba(255, 255, 255, 0.86) !important;
+}
+
+.backtest-page .backtest-field span,
+.backtest-page .compare-metric span,
+.backtest-page .compare-metric small,
+.backtest-page .quality-grid span,
+.backtest-page .benchmark-item span,
+.backtest-page .benchmark-item small,
+.backtest-page .position-list span,
+.import-page .import-field > span,
+.import-page .result-grid span,
+.journal-page .journal-field span {
+  color: #7a8fa0 !important;
+}
+
+.backtest-page .backtest-form .ant-input-number,
+.backtest-page .backtest-form .ant-picker,
+.backtest-page .backtest-form .ant-select-selector,
+.backtest-page .batch-symbol-select .ant-select-selector,
+.import-page .import-card .ant-input,
+.import-page .import-card .ant-picker,
+.import-page .import-card .ant-select-selector,
+.journal-page .journal-form .ant-input-number,
+.journal-page .journal-form .ant-picker,
+.journal-page .journal-form .ant-select-selector,
+.journal-page .journal-form .ant-input {
+  color: #123044 !important;
+  background: rgba(255, 255, 255, 0.94) !important;
+  border-color: rgba(148, 173, 198, 0.48) !important;
+}
+
+.backtest-page .backtest-form .ant-input-number-input,
+.backtest-page .backtest-form .ant-picker-input input,
+.backtest-page .backtest-form .ant-select-selection-item,
+.import-page .import-card .ant-picker-input input,
+.import-page .import-card .ant-select-selection-item,
+.import-page .import-card .ant-picker-suffix,
+.import-page .import-card .ant-select-arrow,
+.journal-page .journal-form .ant-input-number-input,
+.journal-page .journal-form .ant-picker-input input,
+.journal-page .journal-form .ant-select-selection-item,
+.journal-page .journal-form .ant-input {
+  color: #123044 !important;
+}
+
+.backtest-page .backtest-form .ant-picker-suffix,
+.backtest-page .backtest-form .ant-picker-clear,
+.backtest-page .backtest-form .ant-select-arrow {
+  color: #7a8fa0 !important;
+}
+
+.backtest-page .backtest-form .ant-radio-button-wrapper {
+  color: #5c7182 !important;
+  background: #ffffff !important;
+  border-color: rgba(148, 173, 198, 0.44) !important;
+}
+
+.backtest-page .backtest-form .ant-radio-button-wrapper-checked {
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #4aa3ff, #2f80ed) !important;
+}
+
+.backtest-page .advanced-collapse {
+  border-top-color: rgba(148, 173, 198, 0.28) !important;
+}
+
+.backtest-page .advanced-collapse .ant-collapse-header {
+  color: #1c5fb9 !important;
+}
+
+.backtest-page .batch-summary span,
+.backtest-page .benchmark-badge,
+.backtest-page .ai-export-meta span {
+  color: #1c5fb9 !important;
+  background: rgba(47, 128, 237, 0.08) !important;
+  border-color: rgba(47, 128, 237, 0.18) !important;
+}
+
+.backtest-page .compare-metric,
+.backtest-page .quality-grid > div,
+.backtest-page .benchmark-item,
+.backtest-page .position-list > div,
+.import-page .result-grid > div {
+  background: rgba(248, 252, 255, 0.92) !important;
+  border-color: rgba(148, 173, 198, 0.32) !important;
+}
+
+.backtest-page .compare-metric strong,
+.backtest-page .quality-grid strong,
+.backtest-page .position-list strong,
+.import-page .result-grid strong {
+  color: #123044 !important;
+}
+
+.backtest-page .quality-badge {
+  border-color: rgba(148, 173, 198, 0.28) !important;
+}
+
+.backtest-page .quality-badge.ok,
+.backtest-page .position-status.holding,
+.journal-page .executed-tag {
+  color: #15803d !important;
+  background: rgba(22, 163, 74, 0.08) !important;
+  border-color: rgba(22, 163, 74, 0.22) !important;
+}
+
+.backtest-page .quality-badge.danger,
+.journal-page .loss-tag {
+  color: #be123c !important;
+  background: rgba(225, 29, 72, 0.08) !important;
+  border-color: rgba(225, 29, 72, 0.22) !important;
+}
+
+.backtest-page .quality-warnings span,
+.journal-page .flat-tag {
+  color: #b45309 !important;
+  background: rgba(217, 119, 6, 0.08) !important;
+  border-color: rgba(217, 119, 6, 0.22) !important;
+}
+
+.backtest-page .position-status.empty,
+.journal-page .pending-tag {
+  color: #7a8fa0 !important;
+  background: rgba(100, 116, 139, 0.08) !important;
+  border-color: rgba(100, 116, 139, 0.18) !important;
+}
+
+.backtest-page .curve-chart {
+  background: #ffffff !important;
+}
+
+.indicator-grid .indicator-item {
+  background: rgba(255, 255, 255, 0.88) !important;
+  border-color: rgba(148, 173, 198, 0.32) !important;
+}
+
+.indicator-grid .indicator-label {
+  color: #1c5fb9 !important;
+}
+
+.indicator-grid .indicator-item span {
+  color: #7a8fa0 !important;
+}
+
+.indicator-grid .state-good {
+  color: #16a34a !important;
+}
+
+.indicator-grid .state-blue {
+  color: #1c5fb9 !important;
+}
+
+.indicator-grid .state-warn {
+  color: #d97706 !important;
+}
+
+.indicator-grid .state-danger {
+  color: #e11d48 !important;
+}
+
+.indicator-grid .state-neutral {
+  color: #7a8fa0 !important;
+}
+
+.signal-badge {
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+.signal-badge .signal-dot {
+  box-shadow: none !important;
+}
+
+.signal-badge.signal-buy {
+  color: #15803d !important;
+  background: rgba(22, 163, 74, 0.08) !important;
+  border-color: rgba(22, 163, 74, 0.22) !important;
+}
+
+.signal-badge.signal-watch {
+  color: #1c5fb9 !important;
+  background: rgba(47, 128, 237, 0.08) !important;
+  border-color: rgba(47, 128, 237, 0.22) !important;
+}
+
+.signal-badge.signal-avoid {
+  color: #be123c !important;
+  background: rgba(225, 29, 72, 0.08) !important;
+  border-color: rgba(225, 29, 72, 0.22) !important;
+}
+
+.signal-badge.signal-sell {
+  color: #b45309 !important;
+  background: rgba(217, 119, 6, 0.08) !important;
+  border-color: rgba(217, 119, 6, 0.22) !important;
+}
+
+.signal-badge.signal-neutral,
+.signal-badge.signal-muted {
+  color: #7a8fa0 !important;
+  background: rgba(100, 116, 139, 0.08) !important;
+  border-color: rgba(100, 116, 139, 0.18) !important;
+}
+
+/* Final form normalization: page scoped CSS from the old dark theme can load after
+   globals, so these selectors intentionally carry higher specificity. */
+.app-shell .page .ant-input,
+.app-shell .page .ant-input-number,
+.app-shell .page .ant-input-number-affix-wrapper,
+.app-shell .page .ant-input-affix-wrapper,
+.app-shell .page .ant-picker,
+.app-shell .page .ant-select-selector,
+.app-shell .page .ant-input-textarea-affix-wrapper,
+.app-shell .page textarea.ant-input,
+.app-shell .page .date-range-picker.ant-picker,
+.app-shell .page .symbol-selector-wrap .ant-select-selector,
+.app-shell .page .backtest-form .ant-input-number,
+.app-shell .page .backtest-form .ant-picker,
+.app-shell .page .backtest-form .ant-select-selector,
+.app-shell .page .import-card .ant-input,
+.app-shell .page .import-card .ant-picker,
+.app-shell .page .import-card .ant-select-selector,
+.app-shell .page .journal-form .ant-input,
+.app-shell .page .journal-form .ant-input-number,
+.app-shell .page .journal-form .ant-picker,
+.app-shell .page .journal-form .ant-select-selector,
+.app-shell .page .batch-symbol-select .ant-select-selector {
+  color: #123044 !important;
+  background: #ffffff !important;
+  border-color: rgba(148, 173, 198, 0.5) !important;
+  box-shadow: none !important;
+}
+
+.app-shell .page .ant-input:hover,
+.app-shell .page .ant-input-number:hover,
+.app-shell .page .ant-input-number-affix-wrapper:hover,
+.app-shell .page .ant-input-affix-wrapper:hover,
+.app-shell .page .ant-picker:hover,
+.app-shell .page .ant-select:not(.ant-select-disabled):hover .ant-select-selector,
+.app-shell .page .date-range-picker.ant-picker:hover {
+  background: #ffffff !important;
+  border-color: rgba(47, 128, 237, 0.45) !important;
+}
+
+.app-shell .page .ant-input:focus,
+.app-shell .page .ant-input-focused,
+.app-shell .page .ant-input-number-focused,
+.app-shell .page .ant-input-number-affix-wrapper-focused,
+.app-shell .page .ant-input-affix-wrapper-focused,
+.app-shell .page .ant-picker-focused,
+.app-shell .page .ant-select-focused .ant-select-selector {
+  background: #ffffff !important;
+  border-color: rgba(47, 128, 237, 0.72) !important;
+  box-shadow: 0 0 0 3px rgba(47, 128, 237, 0.12) !important;
+}
+
+.app-shell .page .ant-input::placeholder,
+.app-shell .page textarea.ant-input::placeholder,
+.app-shell .page .ant-picker-input > input::placeholder,
+.app-shell .page .ant-select-selection-placeholder {
+  color: #8aa0af !important;
+}
+
+.app-shell .page .ant-picker-input > input,
+.app-shell .page .ant-select-selection-item,
+.app-shell .page .ant-select-selection-search-input,
+.app-shell .page .ant-input-number-input,
+.app-shell .page .ant-input-number .ant-input-number-input,
+.app-shell .page .ant-input {
+  color: #123044 !important;
+}
+
+.app-shell .page .ant-picker-suffix,
+.app-shell .page .ant-picker-clear,
+.app-shell .page .ant-select-arrow,
+.app-shell .page .ant-input-number-handler-wrap,
+.app-shell .page .ant-input-number-handler {
+  color: #7a8fa0 !important;
+  background: transparent !important;
+}
+
+.app-shell .page .ant-input-number-handler-up-inner,
+.app-shell .page .ant-input-number-handler-down-inner {
+  color: #7a8fa0 !important;
+}
+
+.app-shell .page .ant-picker-disabled,
+.app-shell .page .ant-input-disabled,
+.app-shell .page .ant-input-number-disabled,
+.app-shell .page .ant-select-disabled .ant-select-selector {
+  color: #8aa0af !important;
+  background: #f1f7fc !important;
+  border-color: rgba(203, 213, 225, 0.9) !important;
+}
+
+.app-shell .page .ant-picker-disabled input,
+.app-shell .page .ant-input-disabled,
+.app-shell .page .ant-input-number-disabled .ant-input-number-input,
+.app-shell .page .ant-select-disabled .ant-select-selection-item {
+  color: #8aa0af !important;
+}
+
+.ant-picker-dropdown,
+.ant-select-dropdown,
+.ant-dropdown {
+  color-scheme: light;
+}
+
+.ant-picker-dropdown .ant-picker-panel-container,
+.ant-picker-dropdown .ant-picker-panel,
+.ant-picker-dropdown .ant-picker-header,
+.ant-picker-dropdown .ant-picker-footer,
+.ant-select-dropdown,
+.ant-dropdown .ant-dropdown-menu {
+  color: #123044 !important;
+  background: #ffffff !important;
+  border-color: rgba(148, 173, 198, 0.38) !important;
+}
+
+.ant-picker-dropdown .ant-picker-cell,
+.ant-picker-dropdown .ant-picker-content th {
+  color: #8aa0af !important;
+}
+
+.ant-picker-dropdown .ant-picker-cell-in-view,
+.ant-picker-dropdown .ant-picker-cell-in-view .ant-picker-cell-inner,
+.ant-picker-dropdown .ant-picker-header-view,
+.ant-picker-dropdown .ant-picker-header button,
+.ant-picker-dropdown .ant-picker-header-view button {
+  color: #123044 !important;
+}
+
+.ant-picker-dropdown .ant-picker-cell-disabled,
+.ant-picker-dropdown .ant-picker-cell-disabled .ant-picker-cell-inner {
+  color: #cbd5e1 !important;
+}
+
+.ant-picker-dropdown .ant-picker-cell-in-view:not(.ant-picker-cell-selected):not(.ant-picker-cell-range-start):not(.ant-picker-cell-range-end) .ant-picker-cell-inner:hover {
+  color: #1c5fb9 !important;
+  background: rgba(47, 128, 237, 0.1) !important;
+}
+
+.ant-picker-dropdown .ant-picker-cell-in-view.ant-picker-cell-in-range::before,
+.ant-picker-dropdown .ant-picker-cell-in-view.ant-picker-cell-range-start:not(.ant-picker-cell-range-start-single)::before,
+.ant-picker-dropdown .ant-picker-cell-in-view.ant-picker-cell-range-end:not(.ant-picker-cell-range-end-single)::before {
+  background: rgba(47, 128, 237, 0.1) !important;
+}
+
+.ant-picker-dropdown .ant-picker-cell-in-view.ant-picker-cell-in-range .ant-picker-cell-inner {
+  color: #1c5fb9 !important;
+  background: transparent !important;
+}
+
+/* Kline detail local surfaces. These override route-scoped dark blocks. */
+.kline-page .kline-workbar,
+.kline-page .chart-card,
+.kline-page .decision-card,
+.kline-page .indicator-card,
+.kline-page .analysis-tabs-card,
+.kline-page .ai-card,
+.kline-page .explain-card {
+  color: #123044 !important;
+  background: rgba(255, 255, 255, 0.86) !important;
+  border-color: rgba(148, 173, 198, 0.34) !important;
+  box-shadow: 0 12px 34px rgba(31, 76, 112, 0.08) !important;
+}
+
+.kline-page .control-field > span,
+.kline-page .decision-metrics span,
+.kline-page .trade-levels span,
+.kline-page .chart-stats span,
+.kline-page .analysis-tabs .ant-tabs-tab,
+.kline-page .ai-score-grid span,
+.kline-page .ai-footer {
+  color: #7a8fa0 !important;
+}
+
+.kline-page .symbol-title,
+.kline-page .decision-metrics strong,
+.kline-page .trade-levels strong,
+.kline-page .chart-stats strong,
+.kline-page .analysis-tabs .ant-tabs-tab-active .ant-tabs-tab-btn,
+.kline-page .ai-score-grid strong,
+.kline-page .ai-factor-grid h3,
+.kline-page .ai-factor-grid p,
+.kline-page .ai-factor-grid ul {
+  color: #123044 !important;
+}
+
+.kline-page .decision-metrics > div,
+.kline-page .trade-levels > div,
+.kline-page .chart-stats > div,
+.kline-page .ai-score-grid > div,
+.kline-page .ai-factor-grid > div,
+.kline-page .explain-list li {
+  color: #123044 !important;
+  background: rgba(248, 252, 255, 0.94) !important;
+  border-color: rgba(148, 173, 198, 0.32) !important;
+}
+
+.kline-page .period-group .ant-radio-button-wrapper {
+  color: #5c7182 !important;
+  background: #ffffff !important;
+  border-color: rgba(148, 173, 198, 0.44) !important;
+}
+
+.kline-page .period-group .ant-radio-button-wrapper:hover {
+  color: #1c5fb9 !important;
+  border-color: rgba(47, 128, 237, 0.34) !important;
+}
+
+.kline-page .period-group .ant-radio-button-wrapper-checked {
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #4aa3ff, #2f80ed) !important;
+  border-color: transparent !important;
+}
+
+.kline-page .analysis-tabs .ant-tabs-ink-bar {
+  background: #2f80ed !important;
+}
+
+.kline-page .analysis-tabs .ant-tabs-nav::before {
+  border-color: rgba(148, 173, 198, 0.32) !important;
+}
+
+.kline-page .explain-list li {
+  color: #1e3348 !important;
+}
+
+.kline-page .explain-list li::before {
+  background: #16a34a !important;
+  box-shadow: none !important;
+}
+
+.kline-page .risk-card .explain-list li::before {
+  background: #e11d48 !important;
+}
+
+.kline-page .ai-summary {
+  color: #1e3348 !important;
+  background: rgba(47, 128, 237, 0.06) !important;
+  border-color: rgba(47, 128, 237, 0.16) !important;
+}
+
+.kline-page .ai-factor-grid > div:nth-child(1) {
+  border-color: rgba(22, 163, 74, 0.22) !important;
+}
+
+.kline-page .ai-factor-grid > div:nth-child(2) {
+  border-color: rgba(225, 29, 72, 0.22) !important;
+}
+
+.kline-page .ai-factor-grid > div:nth-child(3),
+.kline-page .ai-factor-grid > div:nth-child(4) {
+  border-color: rgba(217, 119, 6, 0.22) !important;
+}
+
+.kline-page .ai-factor-grid > div:nth-child(4) {
+  background: rgba(217, 119, 6, 0.06) !important;
+}
+
+.kline-page .ai-factor-grid li::before {
+  box-shadow: none !important;
+}
+
+.kline-page .raw-report {
+  color: #1e3348 !important;
+  background: #f6fafd !important;
+  border: 1px solid rgba(148, 173, 198, 0.34) !important;
+}
+
+.kline-page .chart-shell .chart-stage,
+.kline-page .chart-shell .kline-chart,
+.kline-page .chart-shell .chart-empty {
+  background: #ffffff !important;
+  border-color: rgba(148, 173, 198, 0.34) !important;
+}
+
+.kline-page .chart-shell .chart-tape,
+.kline-page .chart-shell .chart-diagnostic {
+  background: rgba(148, 173, 198, 0.22) !important;
+  border-bottom-color: rgba(148, 173, 198, 0.32) !important;
+}
+
+.kline-page .chart-shell .chart-tape > div,
+.kline-page .chart-shell .chart-diagnostic > div {
+  background: #f6fafd !important;
+}
+
+.kline-page .chart-shell .chart-tape span,
+.kline-page .chart-shell .chart-diagnostic span,
+.kline-page .chart-empty span {
+  color: #7a8fa0 !important;
+}
+
+.kline-page .chart-shell .chart-tape strong,
+.kline-page .chart-shell .chart-diagnostic strong,
+.kline-page .chart-empty strong {
+  color: #123044 !important;
+}
+
+.kline-page .indicator-grid .indicator-item {
+  color: #123044 !important;
+  background: rgba(248, 252, 255, 0.94) !important;
+  border-color: rgba(148, 173, 198, 0.32) !important;
+}
+
+.kline-page .indicator-grid .indicator-label {
+  color: #1c5fb9 !important;
+}
+
+.kline-page .indicator-grid .indicator-item strong {
+  color: currentColor !important;
+}
+
+.kline-page .indicator-grid .indicator-item span {
+  color: #7a8fa0 !important;
+}
+
+/* Final visual normalization: old monochrome scoped rules still exist in some pages.
+   Keep these high-specificity overrides near the end so click states and local cards
+   stay readable in the light ETF workspace theme. */
+.app-shell .page .ant-btn,
+.app-shell .page .ant-btn-default,
+.app-shell .page .ant-btn-sm {
+  color: #1e3348 !important;
+  background: rgba(255, 255, 255, 0.94) !important;
+  border-color: rgba(129, 153, 174, 0.42) !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+.app-shell .page .ant-btn:hover,
+.app-shell .page .ant-btn:focus,
+.app-shell .page .ant-btn:active {
+  color: #1c5fb9 !important;
+  background: #ffffff !important;
+  border-color: rgba(47, 128, 237, 0.48) !important;
+}
+
+.app-shell .page .ant-btn-primary,
+.app-shell .page .ant-btn-primary:hover,
+.app-shell .page .ant-btn-primary:focus,
+.app-shell .page .ant-btn-primary:active {
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #4aa3ff, #2f80ed) !important;
+  border-color: transparent !important;
+  box-shadow: 0 10px 24px rgba(47, 128, 237, 0.18) !important;
+}
+
+.app-shell .page .ant-btn-dangerous,
+.app-shell .page .ant-btn-dangerous:hover,
+.app-shell .page .ant-btn-dangerous:focus,
+.app-shell .page .ant-btn-dangerous:active {
+  color: #be123c !important;
+  background: rgba(244, 63, 94, 0.08) !important;
+  border-color: rgba(244, 63, 94, 0.24) !important;
+}
+
+.app-shell .page .warning-button,
+.app-shell .page .warning-button:hover,
+.app-shell .page .warning-button:focus,
+.app-shell .page .warning-button:active {
+  color: #1c5fb9 !important;
+  background: rgba(47, 128, 237, 0.1) !important;
+  border-color: rgba(47, 128, 237, 0.22) !important;
+}
+
+.app-shell .page .ant-btn[disabled],
+.app-shell .page .ant-btn-disabled,
+.app-shell .page .ant-btn[disabled]:hover,
+.app-shell .page .ant-btn-disabled:hover {
+  color: #8aa0af !important;
+  background: rgba(238, 246, 251, 0.74) !important;
+  border-color: rgba(203, 213, 225, 0.86) !important;
+}
+
+.app-shell .page .ant-btn > span,
+.app-shell .page .ant-btn .ant-btn-icon {
+  position: relative;
+  z-index: 1;
+  line-height: 1.15;
+}
+
+.app-shell .page .toolbar,
+.app-shell .page .row-actions,
+.app-shell .page .compact-actions,
+.app-shell .page .batch-actions,
+.app-shell .page .ai-export-actions,
+.app-shell .page .action-strip {
+  min-width: 0;
+  flex-wrap: wrap;
+}
+
+.app-shell .page .row-actions .ant-btn,
+.app-shell .page .toolbar .ant-btn,
+.app-shell .page .action-strip .ant-btn {
+  white-space: nowrap;
+}
+
+.dashboard-page .dashboard-command-bar,
+.dashboard-page .signal-card,
+.dashboard-page .rank-row,
+.dashboard-page .mobile-signal-card,
+.backtest-page .strategy-header,
+.backtest-page .compact-actions,
+.backtest-page .batch-actions,
+.backtest-page .compare-metric,
+.backtest-page .quality-grid > div,
+.backtest-page .benchmark-item,
+.backtest-page .position-list > div,
+.backtest-page .ai-export-actions,
+.import-page .source-card,
+.import-page .result-grid > div,
+.journal-page .journal-actions,
+.journal-page .journal-guide,
+.journal-page .guide-step,
+.system-ops-page .ops-actions,
+.system-ops-page .ops-card,
+.symbol-selector-wrap .symbol-resolved-name {
+  color: #123044 !important;
+  background: rgba(255, 255, 255, 0.86) !important;
+  border-color: rgba(129, 153, 174, 0.3) !important;
+}
+
+.dashboard-page .dashboard-command-bar *,
+.dashboard-page .signal-card *,
+.dashboard-page .rank-row *,
+.dashboard-page .mobile-signal-card *,
+.backtest-page .strategy-header *,
+.backtest-page .compact-actions *,
+.backtest-page .batch-actions *,
+.backtest-page .compare-metric *,
+.backtest-page .quality-grid > div *,
+.backtest-page .benchmark-item *,
+.backtest-page .position-list > div *,
+.backtest-page .ai-export-actions *,
+.import-page .source-card *,
+.import-page .result-grid > div *,
+.journal-page .journal-actions *,
+.journal-page .journal-guide *,
+.journal-page .guide-step *,
+.system-ops-page .ops-actions *,
+.system-ops-page .ops-card *,
+.symbol-selector-wrap .symbol-resolved-name * {
+  text-shadow: none !important;
+}
+
+.dashboard-page .dashboard-command-bar strong,
+.dashboard-page .signal-card strong,
+.dashboard-page .rank-row strong,
+.dashboard-page .mobile-signal-card strong,
+.backtest-page .compare-metric strong,
+.backtest-page .quality-grid strong,
+.backtest-page .benchmark-item strong,
+.backtest-page .position-list strong,
+.import-page .source-card strong,
+.import-page .result-grid strong,
+.journal-page .guide-step strong,
+.system-ops-page .ops-card strong {
+  color: #123044 !important;
+}
+
+.dashboard-page .dashboard-command-bar span,
+.dashboard-page .signal-card span,
+.dashboard-page .rank-row span,
+.dashboard-page .mobile-signal-card span,
+.backtest-page .compare-metric span,
+.backtest-page .quality-grid span,
+.backtest-page .benchmark-item span,
+.backtest-page .position-list span,
+.import-page .source-card span,
+.import-page .result-grid span,
+.journal-page .guide-step span,
+.system-ops-page .ops-card span {
+  color: #5c7182 !important;
+}
+
+.app-shell .page .section-title,
+.app-shell .page .page-title,
+.app-shell .page .symbol-title,
+.app-shell .page h1,
+.app-shell .page h2,
+.app-shell .page h3 {
+  color: #123044 !important;
+}
+
+.app-shell .page p,
+.app-shell .page .page-subtitle,
+.app-shell .page .metric-note,
+.app-shell .page .table-summary,
+.app-shell .page .signal-meta {
+  color: #5c7182 !important;
+}
+
+.app-shell .page .ant-table-cell,
+.app-shell .page .ant-table-cell * {
+  line-height: 1.35;
+}
+
+.app-shell .page .ant-table-cell {
+  vertical-align: middle;
+}
+
+@media (max-width: 780px) {
+  .app-shell::before {
+    display: none;
+  }
+}
